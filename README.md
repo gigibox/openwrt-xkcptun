@@ -13,8 +13,6 @@ Check the [release section](https://github.com/gigibox/openwrt-xkcptun/releases)
 
 These commands show how to build an OpenWrt a package(ipk) of xkcptun
 <pre>
-git clone -b chaos_calmer git://github.com/openwrt/openwrt.git
-
 cd openwrt
 
 echo "src-git xkcptun https://github.com/gigibox/openwrt-xkcptun.git" >> feeds.conf.default
