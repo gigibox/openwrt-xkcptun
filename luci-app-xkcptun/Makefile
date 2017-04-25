@@ -34,6 +34,7 @@ define Package/luci-app-xkcptun
 	TITLE:=LuCI support for xkcptun
 	URL:=https://github.com/liudf0716/xkcptun
 	MAINTAINER:=Lars Gierth <larsg@systemli.org>
+	PKGARCH:=all
 	DEPENDS:=+luci-base
 endef
 
