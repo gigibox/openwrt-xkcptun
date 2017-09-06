@@ -11,7 +11,7 @@ if not opkg.status(packageName)[packageName] then
 	return Map(packageName, translate("Xkcptun"), translate('<b style="color:red">Xkcptun 未安装到当前系统.</b>'))
 end
 
-m = Map("xkcptun", translate("xkcptun"), translate("<a target=\"_blank\" href=\"https://github.com/liudf0716/xkcptun\">Xkcptun</a>" .. 
+m = Map("xkcptun", translate("xkcptun"), translate("<a target=\"_blank\" href=\"https://github.com/liudf0716/xkcptun\">Xkcptun</a>" ..
 															"是用c语言实现的kcptun，专为openwrt，lede平台开发" ))
 
 s = m:section(TypedSection, "client", translate("客户端配置"))
@@ -44,6 +44,12 @@ ServerPort.rmempty = false
 
 Key = s:taboption("general", Value, "key", translate("会话秘钥"), translate("连接服务端的会话密码"))
 Key.rmempty = false
+
+Mode = s:taboption("general", Value, "mode", translate("模式"), translate("连接服务端的模式"))
+Mode.rmempty = false
+
+Crypt = s:taboption("general", Value, "crypt", translate("加密方式"), translate("连接服务端的加密方式"))
+Crypt.rmempty = false
 
 -- 高级设置
 MTU = s:taboption("advanced", Value, "mtu", translate("MTU"), translate("maximum transmission unit for UDP packets"))
